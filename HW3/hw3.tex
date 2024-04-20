@@ -100,17 +100,11 @@
 
 \section*{Problem 4}
 \begin{itemize}
-    \item For the first plot (leftmost), where the classes are separated by a curve, we can use a parabolic feature:
-    \[ X_3 = X_1^2 + X_2^2 \]
-    This will allow a decision stump to split the classes using a threshold on \( X_3 \).
+    \item For the first datasets(leftmost), X3 could be X1 * X2 such that X3 $<$ 0 would give the instance red(1) and X3 $>$ 0 give the instance black(0).
     
-    \item For the second plot (middle), with classes linearly separable by a diagonal line, we define:
-    \[ X_3 = X_1 - X_2 \]
-    A decision stump can then classify the instances by applying a threshold on \( X_3 \).
+    \item For the second datasets(middle), X3 could be $|X1|$ which is the absolute value of X1. 
     
-    \item For the third plot (rightmost), where the classes are arranged in a circular pattern:
-    \[ X_3 = \sqrt{X_1^2 + X_2^2} \]
-    Here, \( X_3 \) represents the Euclidean distance from the center of the circle, allowing for a radial separation.
+    \item For the third datasets(rightmost), X3 could be $|X1|$ + $|X3|$ since it’s in linear pattern and involved in both positive and negative coefficients.
 \end{itemize}
 
 \section*{Problem 5}
@@ -173,7 +167,7 @@ The second tree \( f_2 \) is trained on a bootstrap sample selected by the seque
 
     \item \textbf{Instance 6} (Age = 77, ECG = Normal):
     \begin{itemize}
-        \item $f_1$: True (Age > 56)
+        \item $f_1$: True (Age $>$ 56)
         \item $f_2$: False (Normal)
         \item $f_3$: True
         \item \textbf{Aggregated}: True (Majority is True)
